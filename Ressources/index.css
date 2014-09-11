@@ -41,15 +41,21 @@ li{
     margin-bottom: 40px;
 }
 
+#About_me{
+    padding-bottom: 50px;
+}
+
 /*==--EXPERIENCES--==*/
 .articleXP{
     margin-bottom: 40px;
 }
 
-/*==--SKILLS--==*/
-.divSkills{
-    margin-bottom: 40px;
+#Professional_experiences{
+    padding-bottom: 50px;
 }
+
+/*==--SKILLS--==*/
+
 
 /*==--CONTACT ME--==*/
 .articleform{
