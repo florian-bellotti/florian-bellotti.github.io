@@ -92,13 +92,14 @@ ul{
 nav{
     background-color: #484A4C;
 }
+    
+nav a{
+    color: #FFFFFF;
+}
 
 nav a:hover{
-    background-color: red;
-}
-    
-nav a, nav a:hover{
     color: #5CB85C;
+    background: #484A4C;
 }
 
 
@@ -111,6 +112,11 @@ nav a, nav a:hover{
 /*==--EXPERIENCES--==*/
 h4{
     font-size:14px;
+}
+
+section a:hover{
+    color : #5CB85C;
+    background-color: #eee;
 }
 
 /*==--SKILLS--==*/
