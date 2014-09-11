@@ -7,12 +7,14 @@ $msg_ok = "Votre demande a bien été prise en compte.";
 $message = $msg_erreur;
 define('MAIL_DESTINATAIRE','florian.bellotti@viacesi.fr'); // remplacer par votre email
 define('MAIL_SUJET','message CV en ligne');
- 
+
+$tel="";
+
 // vérification des champs
 if (empty($_POST['name'])) 
 $message .= "Votre nom<br/>";
-if (empty($_POST['telephone'])) 
-$message .= "Votre telephone<br/>";
+if (!empty($_POST['telephone']))
+$tel=$_POST['telephone'];
 if (empty($_POST['email'])) 
 $message .= "Votre email<br/>";
 if (empty($_POST['message'])) 
@@ -28,6 +30,7 @@ $mail_entete  = "From: ".$_POST['email']."\n";
  
 // préparation du corps du mail
 $mail_corps  = "Message de :". $nom."\n";
+$mail_corps  = "numéro de téléphone :". $tel."\n";
 $mail_corps .= "Adresse : ".$_POST['email']."\n";
 $mail_corps .= "Message: ".$_POST['message']."\n\n\n";
 
