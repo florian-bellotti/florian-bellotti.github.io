@@ -280,7 +280,7 @@
             
             <!--DEBUT formulaire-->
             <article class="col-xs-offset-1 col-md-4 articleform">
-                <form method="post" action="Ressources/formulaire.php" id="FormulaireContact">
+                <form id="envoi-mail" action="index.html" class="row" id="form-container">
                     <div class="row ligneformulaire">
                         <div id="nameV" class="input-group col-md-12 ">
                             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
@@ -364,6 +364,7 @@
                     var condition=0;
                     $("#emailV").addClass("has-default");
 //                    verification nom
+                    var name=($("#name").val());
                     if($("#name").val().length >= 2) {
                         $("#nameV").removeClass("has-error");
                         $("#nameV").addClass("has-success");
@@ -406,6 +407,7 @@
                     
                     
 //                    verification message
+                    var message=($("#message").val());
                     if($("#message").val().length >= 2) {
                         $("#messageV").removeClass("has-error");
                         $("#messageV").addClass("has-success");
@@ -415,11 +417,48 @@
                         num++;
                     }
                     
+
+                    
                     if(num>0){
                         return false;
                     }
+                    else{
+                        alert();
+                        var data = {
+                            "key": "Ld4UoxMJBAqYJ9x9lc3qfg",
+                            "message": {
+                                "html": "Message from : " + email + " , nom : " + name + " , phone number : " + telephone + "<br/>" + message,
+                                "subject": "Contact from online resume",
+                                "from_email": email,
+                                "from_name": name,
+                                "to": [{
+                                    "email": "florian.bellotti@viacesi.fr",
+                                    "name": "florian BELLOTTI"
+                                }]
+                            },
+                            "async": true
+                        };
+                        $.ajax({
+                            type: "POST",
+                            url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+                            data: data
+                        });
+
+                    }
                 });
             });
+        </script>
+        
+        
+        
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-51652438-1', 'vdruon.github.io');
+          ga('send', 'pageview');
         </script>
         
     </body>
