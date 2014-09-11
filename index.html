@@ -423,26 +423,27 @@
                         return false;
                     }
                     else{
-                        alert();
-                        var data = {
-                            "key": "Ld4UoxMJBAqYJ9x9lc3qfg",
-                            "message": {
-                                "html": "Message from : " + email + " , nom : " + name + " , phone number : " + telephone + "<br/>" + message,
-                                "subject": "Contact from online resume",
-                                "from_email": email,
-                                "from_name": name,
-                                "to": [{
-                                    "email": "florian.bellotti@viacesi.fr",
-                                    "name": "florian BELLOTTI"
-                                }]
-                            },
-                            "async": true
-                        };
-                        $.ajax({
-                            type: "POST",
-                            url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-                            data: data
-                        });
+                        var messageErreur = "Le message n\'a pas pu être envoyé!";
+                        alert(messageErreur);
+//                        var data = {
+//                            "key": "Ld4UoxMJBAqYJ9x9lc3qfg",
+//                            "message": {
+//                                "html": "Message from : " + email + " , nom : " + name + " , phone number : " + telephone + "<br/>" + message,
+//                                "subject": "Contact from online resume",
+//                                "from_email": email,
+//                                "from_name": name,
+//                                "to": [{
+//                                    "email": "florian.bellotti@viacesi.fr",
+//                                    "name": "florian BELLOTTI"
+//                                }]
+//                            },
+//                            "async": true
+//                        };
+//                        $.ajax({
+//                            type: "POST",
+//                            url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+//                            data: data
+//                        });
 
                     }
                 });
