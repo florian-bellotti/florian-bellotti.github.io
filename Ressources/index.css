@@ -1,21 +1,3 @@
-@media screen and (max-width: 768px){
-    nav{
-        display: none;
-    }
-}
-
-@media screen and (min-width: 769px){
-    nav{
-        background-color: #484A4C;
-    }
-    
-    nav a{
-        color: white;
-    }
-    
-
-}
-
 .afficherdiv{
     border:1px solid black;
 }
@@ -106,6 +88,20 @@ h1{
 ul{
     font-family:    Comic Sans MS;
 }
+
+nav{
+    background-color: #484A4C;
+}
+
+nav a:hover{
+    background-color: red;
+}
+    
+nav a, nav a:hover{
+    color: #5CB85C;
+}
+
+
 
 /*==--ABOUT ME--==*/
 .spanAbout{
