@@ -1,3 +1,7 @@
+.font16{
+    font-size:16px;
+}
+
 .afficherdiv{
     border:1px solid black;
 }
@@ -137,3 +141,10 @@ section a{
 /*==--CONTACT ME--==*/
 
 /*==--FOOTER--==*/
+
+@media screen and (max-width:768px){
+    
+.font16{
+    font-size:18px;
+    
+}
