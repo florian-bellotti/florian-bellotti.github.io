@@ -60,8 +60,8 @@ $(function () {
             type: 'pie',
             name: 'Valeur',
             data: [
-                ['Réseau',   30.0],
-                ['Système',       10.0],
+                ['Réseau',   10.0],
+                ['Système',       30.0],
                 ['Développement',       60.0]
             ]
         }]
