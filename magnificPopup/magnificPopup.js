@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$('.popup-with-zoom-anim').magnificPopup({
 		type: 'inline',
 
-		fixedContentPos: true,
+		fixedContentPos: false,
 		fixedBgPos: true,
 
 		overflowY: 'auto',
