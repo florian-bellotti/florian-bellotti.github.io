@@ -75,10 +75,35 @@
               src: local('Open Sans Extrabold Italic'), local('OpenSans-ExtraboldItalic'), url(http://fonts.gstatic.com/s/opensans/v10/PRmiXeptR36kaC0GEAetxkdJXfhP-2RmnAuS9A2rxpE.ttf) format('truetype');
             }
         </style>
+        <!--DEBUT GOOGLE MAP-->
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script type="text/javascript">
+            function initialiser() {
+                var latlng = new google.maps.LatLng(50.6098890,3.2381760);
+                //objet contenant des propriétés avec des identificateurs prédéfinis dans Google Maps permettant
+                //de définir des options d'affichage de notre carte
+                var options = {
+                    center: latlng,
+                    zoom: 10,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                
+                //constructeur de la carte qui prend en paramêtre le conteneur HTML
+                //dans lequel la carte doit s'afficher et les options
+                var carte = new google.maps.Map(document.getElementById("carte"), options);
+
+                //création du marqueur
+                var marqueur = new google.maps.Marker({
+                   position: new google.maps.LatLng(50.6098890,3.2381760),
+                    map: carte
+               });
+            }
+        </script>
+<!--FIN GOOGLE MAP-->
         <title>Florian BELLOTTI - CV</title>
     </head>
     
-    <body>
+    <body onload="initialiser()">
         <!-- NAVIGATEUR -->
         <nav  id="sticky_navigation" class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container">
@@ -541,11 +566,9 @@
                         Adresse : <strong>Baisieux - 59780 </strong>
                     </div>
                 </article>
-                <!--DEBUT GOOGLE MAP-->
             <div class="googleMap col-xs-12 col-md-offset-1 col-md-8">
-                <script type="text/javascript" src="http://www.supportduweb.com/google_map_gen.js?lati=50.6098890&long=3.2381760&zoom=10&width=675&height=400&mapType=normal&map_btn_normal=yes&map_btn_satelite=yes&map_btn_mixte=yes&map_small=yes&marqueur=yes&info_bulle="></script><br />
+                <div id="carte" style="width:100%; height:300px"></div>
             </div>
-            <!--FIN GOOGLE MAP-->
             </div>
         </section>
 
