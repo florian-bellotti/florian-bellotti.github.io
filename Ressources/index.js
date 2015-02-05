@@ -61,8 +61,9 @@ $(function () {
             name: 'Valeur',
             data: [
                 ['Réseau',   10.0],
-                ['Système',       45.0],
-                ['Développement',       45.0]
+                ['Système',       40.0],
+                ['Développement',       40.0],
+                ['DBA',       10.0]
             ]
         }]
     });

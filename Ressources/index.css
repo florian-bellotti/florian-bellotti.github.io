@@ -1,151 +1,477 @@
-.font16{
+/* ------------------------------------------------------------------------------
+
+    1. CSS Reset
+    2. Document Setup
+
+
+
+
+
+/*---------------------------------------------------------------------------------
+ 1. CSS Reset
+-------------------------------------------------------------------------------*/
+body {
+    padding-top: 0px;
+    color:#fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    position:relative;
+    background:#262b37;
+    width:100%;
+    height:100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration:none;
+    color:#fff;
+    outline:none;
+}
+
+
+
+
+/*----------------------------------------------------
+ 2. Document Setup
+------------------------------------------------------*/
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size:14px;
+    line-height:21px;
+    font-weight:400;
+    padding-bottom:22px;
+    margin:0px;
+}
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-size:80px;
+    line-height:90px;
+    font-weight:700;
+    margin:0px;
+    padding-bottom:8px;
+}
+h2{
+    font-family: 'Open Sans', sans-serif;
+    font-size:36px;
+    line-height:38px;
+    padding-bottom:30px;
+    font-weight:600;
+    text-transform:uppercase;
+    margin:0px;
+}
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-size:24px;
+    line-height:30px;
+    padding-bottom:6px;
+    font-weight:550;
+    margin:0px;
+}
+h4{
+    font-family: 'Open Sans', sans-serif;
+    font-size:19px;
+    line-height:24px;
+    padding-bottom:6px;
+    font-weight:600;
+    margin:0px;
+}
+h5{
+    font-family: 'Open Sans', sans-serif;
     font-size:16px;
+    line-height:24px;
+    padding-bottom:6px;
+    font-weight:400;
+    margin:0px;
 }
 
-.afficherdiv{
-    border:1px solid black;
+h4.subHeading{
+    font-weight:600;
+    font-size:18px;
+    padding-bottom:22px;
 }
 
-/*=====-----DISPOSITION ET TAILLES-----=====*/
-
-/*==--HEADER--==*/
-h1, header{
-    float: inherit;
+.heading{
+    text-align:center;
+    padding-bottom:45px;
 }
+
+.topmar{
+    margin-top:20px;
+}
+
+
+
+/*----------------------------------------------------
+ 3. Nav
+------------------------------------------------------*/
+header{
+    position:relative;
+}
+.banner{
+    overflow:hidden;
+    margin:0 auto !important;
+    background:#CACACA;
+}
+
+.bannerText{
+    position:absolute;
+    left:0;
+    right:0;
+    top:35%;
+    text-align:center;
+    padding:30px 0 30px ;
+    max-width:960px;
+    border:1px solid #fff;
+    background: rgba(0, 0, 0, 0.2);
+     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#b2000000, endColorstr=#b2000000);
+    zoom: 1;
+}
+.bannerText h1{
+    text-transform:uppercase;
+}
+.bannerText h2{
+    font-size:34px;
+    text-transform:none;
+}
+
+.backgroundImage{
+    background-color:#262b37; 
+    background-image:url(image/ski.jpg); 
+    background-repeat: no-repeat;
+    background-position: center; 
+    width:100%;
+    height:100%;
+}
+
+.navwrapper .container{
+    padding:0;
+    width:auto;
+}
+
+.nav > li > a{
+    display:inline-block;
+}
+.navbar-nav > li{
+    float: none;
+    display: inline;
+}
+.navbar-nav{
+    margin: 0 auto;
+    text-align: center;
+    float: none;
+}
+
+.navbar-toggle{
+    margin-top:14px;
+}
+
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  margin-top:0px;
+  position: relative;
+  z-index: 15;
+  background:#262b37;
+}
+.navbar-wrapper .container{
+    padding:0px;
+}
+
+.navbar-collapse{
+    padding:0;
+}
+.navbar-collapse.in{
+    max-height:100%;
+}
+
+.navbar.navbar-inverse.navbar-static-top,.navbar.navbar-inverse.navbar-fixed-top {
+  margin:0px auto;
+  background:#262b37;
+  color:#c3c8d6;
+  border:none;
+  font-family: 'Open Sans', sans-serif;
+  font-size:13px;
+  text-transform:uppercase;
+}
+.navbar.navbar-inverse.navbar-static-top a, .navbar.navbar-inverse.navbar-fixed-top a{
+  color:#c3c8d6;
+  padding:22px 25px;
+  line-height:18px;
+  text-align:center;
+}
+.navbar.navbar-inverse.navbar-static-top a:hover, .navbar.navbar-inverse.navbar-fixed-top a:hover{
+  color:#fff;
+}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus{
+  background:#1b1f29;
+  color:#c3c8d6;
+}
+.navbar-inverse .navbar-nav>.active>a:hover {
+  background:#1b1f29;
+  color:#fff;
+}
+
+.hideClass{
+    display:none;
+}
+
+
+
+
+/*----------------------------------------------------
+ 4. HEADER
+------------------------------------------------------*/
+header{
+    position:relative;
+    background:#fff;
+    color:#000;
+}
+
+header .container{
+    padding-top:70px ;
+}
+
 header h1{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    color: #5CB85C;
 }
 
 header p{
-    margin-bottom: 50px;
+    font-size: 14px;
+    padding-bottom: 50px;
 }
 
-/*==--NAV--==*/
-ul{
-    list-style: none;
-    text-align: center;
+
+
+/*----------------------------------------------------
+ 5. Resume
+------------------------------------------------------*/
+#resume{
+    background:#E5E5E5;
+    color:#000;
+    position:relative;
 }
 
-li{
-    display: inline;
-    margin-left: 20px;
+#resume .container{
+    padding-top:70px ;
+    padding-bottom: 50px;
 }
 
-/*==--ABOUT ME--==*/
-.spanAbout{
+#resume h2, #resume span{
+    color:#5CB85C;
+}
+
+#resume span{
     font-size: 40px;
 }
 
-.hauteurP1{
-    height: 125px;
+
+
+
+/*----------------------------------------------------
+ 6. Experiences
+------------------------------------------------------*/
+#experiences{
+    background:#fff;
+    color:#000;
+    position:relative;
 }
 
-.articleDiagramme{
-    margin-bottom: 40px;
-}
-
-#About_me{
+#experiences .container{
+    padding-top:70px ;
     padding-bottom: 50px;
 }
 
-/*==--EXPERIENCES--==*/
-.articleXP{
-    margin-bottom: 40px;
+#experiences h2{
+    color:#5CB85C;
 }
 
-#Professional_experiences{
+
+
+
+
+
+/*----------------------------------------------------
+ 7. Compétences
+------------------------------------------------------*/
+#competences{
+    background:#E5E5E5;
+    color:#000;
+    position:relative;
+}
+
+#competences .container{
+    padding-top:70px ;
     padding-bottom: 50px;
 }
 
-/*==--SKILLS--==*/
+#competences h2{
+    color:#5CB85C;
+}
 
-#Skills{
+#competences a{
+    color:#5CB85C;
+    font-weight:600;
+}
+
+
+
+/*----------------------------------------------------
+ 8. Formation
+------------------------------------------------------*/
+#formation{
+    background:#fff;
+    color:#000;
+    position:relative;
+}
+
+#formation .container{
+    padding-top:70px ;
     padding-bottom: 50px;
 }
 
-/*==--CONTACT ME--==*/
-.articleform{
-    margin-bottom: 40px;
+#formation h2{
+    color:#5CB85C;
 }
-.formulaire{
-    height: 30px;
-}
-
-.ligneformulaire{
-    margin-bottom: 10px;
+#formation .exCon{
+    background: #f3f3f3;
+    padding:22px 47px 6px 47px;
+    /*margin-left:15px;*/
 }
 
-textarea{ 
-    resize:none;
+
+/*----------------------------------------------------
+ 9. Projets
+------------------------------------------------------*/
+#projet{
+    background:#E5E5E5;
+    color:#000;
+    position:relative;
 }
 
-/*==--FOOTER--==*/
-
-
-/*=====-----COULEURS ET POLICES-----=====*/
-.premier{
-    background-color: #FFFFFF;
+#projet .container{
+    padding-top:70px ;
+    padding-bottom: 50px;
 }
 
-.deuxieme{
-    background-color: #E5E5E5;
+#projet h2{
+    color:#5CB85C;
+}
+.workDetails .rightArea{
+    padding-bottom:47px;
+}
+.workDetails:last-child .rightArea{
+    padding-bottom:0px;
 }
 
-/*==--HEADER--==*/
-h1{
-    color: #5CB85C;
-}
 
-/*==--NAV--==*/
-ul{
-    font-family:    Comic Sans MS;
-}
-
-nav{
-    background-color: #484A4C;
-}
+.workYear{
+    font-size:17px;
+    color:#fff;
+    background:#ff8000;
+    text-align:center;
+    width:120px;
+    height:120px;
+    padding:40px 0 40px 0;
     
-nav a{
-    color: #FFFFFF;
-}
-
-nav a:hover{
-    color: #5CB85C;
-    background: #484A4C;
-}
-
-
-
-/*==--ABOUT ME--==*/
-.spanAbout{
-    color: #5CB85C;
-}
-
-/*==--EXPERIENCES--==*/
-h4{
-    font-size:14px;
-}
-
-section a:hover{
-    color : #5CB85C;
-    background-color: #eee;
-}
-
-/*==--SKILLS--==*/
-section a{
-    color:black;
-}
-
-
-/*==--CONTACT ME--==*/
-
-/*==--FOOTER--==*/
-
-@media only screen 
-and (min-device-width : 0px) 
-and (max-device-width : 2000px){
     
-.font16{
-    font-size:16px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    position: center;
 }
+
+#projet .exCon{
+    background: #fafafa;
+    padding:22px 47px 6px 47px;
+    /*margin-left:30px;*/
+}
+
+.arrow{
+    margin-top: 35px;
+}
+
+@media screen and (max-width: 992px) {
+    .arrow{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .arrowtop{
+        display: none
+    }
+}
+/*----------------------------------------------------
+ 10. Contact
+------------------------------------------------------*/
+#contact{
+    background:#fff;
+    color:#000;
+    position:relative;
+}
+
+#contact .container{
+    padding-top:70px ;
+    padding-bottom: 50px;
+}
+
+#contact h2{
+    color:#5CB85C;
+
+}
+.googleMap{
+    padding-bottom: 50px;
+}
+
+
+
+
+/*----------------------------------------------------
+ 11. Footer 
+------------------------------------------------------*/
+
+.footer .container{
+    
+    padding-bottom: 40px;
+    
+}
+
+.footer ul{
+    padding-top: 40px;
+    margin:0 auto;
+    text-align:center;
+    list-style-type:none;
+}
+.footer ul li{
+    display:inline-block;
+    text-align:center;
+    background:#ffffff;
+    color:#262b37;
+    line-height:42px;
+    margin:0 6px;
+    width:42px !important;
+    height:42px !important;
+    
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.footer ul li:hover{
+    background:#5CB85C ;
+}
+.footer ul li:hover a{
+    color:#fff;
+}
+
+.footer ul li a{
+    color:#262b37;
+    width:42px !important;
+    height:42px !important;
+}
+.footer ul li a i{
+    line-height:42px !important;
+}
+
+
