@@ -63,7 +63,7 @@ $(function () {
                 ['Réseau',   10.0],
                 ['Système',       40.0],
                 ['Développement',       40.0],
-                ['DBA',       10.0]
+                ['SGBD',       10.0]
             ]
         }]
     });
