@@ -60,10 +60,11 @@ $(function () {
             type: 'pie',
             name: 'Valeur',
             data: [
-                ['Réseau',   10.0],
-                ['Système',       40.0],
-                ['Développement',       40.0],
-                ['SGBD',       10.0]
+				['Developpement logiciel',       15.0],
+                ['Web',   20.0],
+                
+                ['DevOps',       35.0],
+                ['Système',       30.0]
             ]
         }]
     });
