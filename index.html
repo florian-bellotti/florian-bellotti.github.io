@@ -397,7 +397,12 @@
                         <img class="img-responsive col-sm-3" src="Ressources/images/exiaLogo.png">
                     </div>
                 </div>
-                <div class="container workDetails">
+				
+				<button id="buttonFormation"  class="btn btn-primary" onClick="toggleDisplayFormation()" type="button" data-toggle="collapse" data-target=".collapseFormations" aria-expanded="false" aria-controls="collapseExample">
+					Voir plus ...
+				</button>
+				
+                <div class="container workDetails collapse collapseFormations">
                     <div class="col-xs-12 col-md-2">
                         <div class="workYear">2010 – 2013</div>
                     </div>
@@ -413,7 +418,7 @@
                     </div>
                 </div>
                 
-                <div class="container workDetails">
+                <div class="container workDetails collapse collapseFormations">
                     <div class="col-xs-12 col-md-2">
                         <div class="workYear">2006 – 2010</div>
                     </div>
@@ -462,7 +467,12 @@
                         <img class="img-responsive col-sm-6" alt="Responsive image" src="Ressources/images/carnofluxe.png" >
                     </div>
                 </div>
-                <div class="container workDetails">
+				
+				<button id="buttonProjet" class="btn btn-primary" onClick="toggleDisplayProjet()" type="button" data-toggle="collapse" data-target=".collapseExample" aria-expanded="false" aria-controls="collapseExample">
+					Voir plus ...
+				</button>
+
+                <div class="container workDetails collapse collapseExample">
                     <div class="col-xs-12 col-md-2">
                         <div class="workYear">juin 2014<br>
                         Exia</div>
@@ -480,7 +490,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="container workDetails">
+                <div class="container workDetails collapse collapseExample">
                     <div class="col-xs-12 col-md-2">
                         <div class="workYear">avril 2014<br>
                         Exia</div>
@@ -502,7 +512,7 @@
                         <img class="img-responsive col-sm-6" alt="Responsive image" src="Ressources/images/SimDonjon.png" >
                     </div>
                 </div>
-                <div class=" container workDetails">
+                <div class=" container workDetails collapse collapseExample">
                     <div class="col-xs-12 col-md-2">
                         <div class="workYear">février 2014<br>
                         Exia</div>
@@ -520,7 +530,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="container workDetails">
+                <div class="container workDetails collapse collapseExample">
                     <div class="col-xs-12 col-md-2">
                         <div class="workYear">déc. 2013<br>
                         Exia</div>
@@ -583,6 +593,26 @@
 
         
         <script>
+		function toggleDisplayFormation()
+		{
+			var elmt = document.getElementById("buttonFormation");
+		   if(typeof elmt == "string")
+			  elmt = document.getElementById(elmt);
+		   if(elmt.style.display == "none")
+			  elmt.style.display = "";
+		   else
+			  elmt.style.display = "none";
+		}
+		function toggleDisplayProjet()
+		{
+			var elmt = document.getElementById("buttonProjet");
+		   if(typeof elmt == "string")
+			  elmt = document.getElementById(elmt);
+		   if(elmt.style.display == "none")
+			  elmt.style.display = "";
+		   else
+			  elmt.style.display = "none";
+		}
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
